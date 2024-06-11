@@ -126,8 +126,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     	</div>
 	</div>
 </div>
-        <div class="container videobox"> 
-        <div id="vid_65ef44f4b5d1b90007bcf356" style="position:relative;width:100%;padding: 56.25% 0 0;">
+        <div class="container videobox">
+    <div id="vid_65ef44f4b5d1b90007bcf356" style="position:relative;width:100%;padding: 56.25% 0 0;">
         <img decoding="async" id="thumb_65ef44f4b5d1b90007bcf356" src="https://images.converteai.net/25df30cd-4a7c-4987-987e-5e51b3c80fdd/players/65ef44f4b5d1b90007bcf356/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
         <div id="backdrop_65ef44f4b5d1b90007bcf356" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div>
     </div>
@@ -136,7 +136,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         s.src = "https://scripts.converteai.net/25df30cd-4a7c-4987-987e-5e51b3c80fdd/players/65ef44f4b5d1b90007bcf356/player.js";
         s.async = !0;
         document.head.appendChild(s);
-    </script></div>            </div>
+    </script>
+    <script>
+        // Função para eventos personalizados e timers
+        function setupCustomEvents() {
+            // Função para mostrar elementos baseado em cookie
+            function checkCookieAndShow() {
+                var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)LUI\.return_visit\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+                if (cookieValue) {
+                    document.querySelector("#btn-cta").style.display = "block";
+                    document.querySelector("#vsltimer_host").style.display = "block";
+                    document.querySelector("#ordbtn_host").style.display = "block";
+                }
+            }
+
+            // Mostra elemento após 1674 segundos
+            setTimeout(function() {
+                document.querySelector("#btn-cta").style.display = "block";
+                document.querySelector("#vsltimer_host").style.display = "block";
+                document.querySelector("#ordbtn_host").style.display = "block";
+                // Adicione outras ações aqui se necessário
+            }, 1674000);
+
+            // Checa o cookie após 1 segundo
+            setTimeout(checkCookieAndShow, 1000);
+
+            // Evento de Google Analytics a cada 10 segundos
+            setInterval(function() {
+                // Substitua pelo seu código de evento do Google Analytics
+                console.log("Evento de Google Analytics");
+            }, 10000);
+        }
+
+        // Chama a função de configuração após o carregamento do script do player
+        s.onload = setupCustomEvents;
+    </script>
+</div>
+</div>            </div>
     <div class="py-4"></div>
 </div>
 
